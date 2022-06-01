@@ -38,7 +38,7 @@ class RadixSort {
 
 		for (int i = 0; i < size; i++) {
 			array[i] = output[i];
-		}
+		}//Construye el array original pero ordenado.
 	}	
 	
 	//Function to get the largest element from an array
@@ -67,7 +67,7 @@ class RadixSort {
 	}
 
 	public static int[] ArrayDescendente(){
-		int x=20;
+		int x=50000;
 		int[] arr = new int[x];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = x;
@@ -77,7 +77,7 @@ class RadixSort {
 	}
 
 	public static int[] ArrayAscendente() {
-		int[] arr = new int[20];
+		int[] arr = new int[50000];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = i;
 		}
@@ -148,16 +148,16 @@ class RadixSort {
 		int[] arrayPrueba = {1, 333, 14, 69, 6, 113, 8, 14 , 20};
 		//Instancia de RadixSort
 		RadixSort rs1 = new RadixSort();
-		//System.out.println("Mejor Caso: ");
-		//int[] numerosAscendentes = ArrayAscendente();
-		//System.out.println("\t"+"Ascendente: ");
-		//rs1.radixSort(numerosAscendentes);
-		//System.out.println("-----------------------------");
-		//System.out.println("Peor Caso: ");
-		//int[] numerosDescendentes = ArrayDescendente();
-		//System.out.println("\t"+"Descendente: ");
+		System.out.println("Mejor Caso: ");
+		int[] numerosAscendentes = ArrayAscendente();
+		System.out.println("\t"+"Ascendente: ");
+		rs1.radixSort(numerosAscendentes);
+		System.out.println("-----------------------------");
+		System.out.println("Peor Caso: ");
+		int[] numerosDescendentes = ArrayDescendente();
+		System.out.println("\t"+"Descendente: ");
 		//System.out.println("Array Descendente: "+Arrays.toString(numerosDescendentes));
-		rs1.radixSort(arrayPrueba);//Prueba
+		rs1.radixSort(numerosDescendentes);//Prueba
 		//System.out.println("Array Descendente: "+Arrays.toString(numerosDescendentes));
 		//Zona experimental
 		//System.out.println("Array Dinamico: ");

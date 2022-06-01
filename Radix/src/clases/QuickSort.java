@@ -21,7 +21,6 @@ public class QuickSort {
     }
 
     public static void quickSortAlgo(int[] arrayTobeSorted, int start, int end) {
-
         if (start < end) {
             int pivot = arrayPartition(arrayTobeSorted, start, end);
             quickSortAlgo(arrayTobeSorted, start, pivot - 1);
@@ -30,7 +29,7 @@ public class QuickSort {
     }
     
     public static int[] ArrayDescendente(){
-    	int x=10000;
+    	int x=17000;
           int[] arr = new int[x];
           for (int i = 0; i < arr.length; i++) {
             arr[i] = x;
@@ -40,7 +39,7 @@ public class QuickSort {
     }
 
     public static int[] ArrayAscendente() {
-          int[] arr = new int[10000];
+          int[] arr = new int[25000];
           for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
           }
@@ -52,11 +51,7 @@ public class QuickSort {
         int[] numerosAscendentes = ArrayAscendente();
         System.out.println("Mejor Caso: ");
         System.out.println("\t"+"Ascendente: ");
-        long startTime2 = System.nanoTime();
-        quickSortAlgo(numerosAscendentes, 0, numerosAscendentes.length - 1);
-        long endTime2 = System.nanoTime();
-        System.out.println("\t"+"Duración: " + (endTime2-startTime2)/1e6 + " ms");
-        
+        //quickSortAlgo(numerosAscendentes, 0, numerosAscendentes.length - 1);
         int[] numerosDescendentes = ArrayDescendente();
         System.out.println("-----------------------------");
         System.out.println("Peor Caso: ");
