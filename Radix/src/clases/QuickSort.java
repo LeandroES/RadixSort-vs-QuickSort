@@ -39,7 +39,7 @@ public class QuickSort {
     }
 
     public static int[] ArrayAscendente() {
-          int[] arr = new int[25000];
+          int[] arr = new int[17000];
           for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
           }
@@ -51,7 +51,7 @@ public class QuickSort {
         int[] numerosAscendentes = ArrayAscendente();
         System.out.println("Mejor Caso: ");
         System.out.println("\t"+"Ascendente: ");
-        //quickSortAlgo(numerosAscendentes, 0, numerosAscendentes.length - 1);
+        quickSortAlgo(numerosAscendentes, 0, numerosAscendentes.length - 1);
         int[] numerosDescendentes = ArrayDescendente();
         System.out.println("-----------------------------");
         System.out.println("Peor Caso: ");
